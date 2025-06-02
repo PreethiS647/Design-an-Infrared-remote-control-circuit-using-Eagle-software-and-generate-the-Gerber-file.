@@ -1,77 +1,55 @@
-# Design-an-Infrared-remote-control-circuit-using-Eagle-software-and-generate-the-Gerber-file
+# Design-an-Infrared-remote-control-circuit-using-Eagle-software-and-generate-the-Gerber-file.
+## Exp 4: Design an Infrared remote control circuit using Eagle software
+## AIM:
+To design the schematic and PCB layout diagram of an Infrared remote control circuit using Eagle software.
 
-## Bill-of-Materials-for-PCB-Design
-## Aim
- To prepare the Bill of Material for the given circuit.
-## Software’s required
- Eagle software
-## Procedure
- Collect all relevant information about the product for which you are preparing the BOM.
- Break down the product into its individual components, sub-assemblies, and raw materials.
- Create a list of all the components needed for the product. Include details such as part numbers,
- descriptions, and any specifications required for each component.
- Determine the quantity of each component required for the product.
- If there are multiple options for certain components or materials, include them in the BOM along
- with their specifications
- Calculate the total quantity of each component needed for the entire production run or specified
- period
- Review the BOM to ensure accuracy and completeness.
- Organize the BOM in a clear and logical format. Use tables or spreadsheets to present the
- information in a structured manner
-## Theory
-# What is a BOM?”
- A bill of materials (BOM) is an extensive list documenting all the parts and components required to
- build an electronic product based on a printed circuit board (PCB) design. The BOM serves as a
- master guide through the entire manufacturing process spanning across procurement, assembly,
- testing and fulfillment stages.For any complex piece of electronic equipment containing hundreds
- or thousands of discreet parts that need to be sourced, populated and validated, maintaining an
- accurate BOM is absolutely essential for managing production. Without a properly structured BOM
- guiding both human operators and automated systems, assembling modern PCBs would essentially
- be impossible.So in essence, the bill of materials is at the core of translating a completed PCB
- hardware design into a physical reality.
-# Key Elements Comprising a PCB Bill of Materials
- An effective BOM for facilitating PCB assembly is much more than just a simple list of components.
- It is a meticulously structured datasheet encompassing vital details on every individual item that
- collectively comprises the build of materials needed for a board-level product. Here are the typical
- data categories captured within an electronics BOM: Part Number — Unique identifier code for
- each component
- Description — Text name stating exactly what the part is
- Manufacturer — Company that produces the component
- Manufacturer Part Number — The specific part number used by the manufacturer
- Component Package — Physical form factor, case style, footprint
- Reference Designator — Matching ID code labeled on PCB design prints
- Location — Where part mounts on board (component placement)
- Quantity — Number of units needed on hand
- Beyond this, additional columns may specify pricing, sourcing information, board layer side,
- tolerances, alternate substitutes, lifecycle status, assembly instructions and other specifics as
- applicable per product
-# BOM Role in Assembly
- When components start arriving to the factory, they need to be prepared and kitted out for loading
- onto PCBs along optimized assembly lines. Here the bill of materials transforms into a Production
- BOM focused on enabling swift manufacturing activity. Some of the ways this Production BOM
- guides assembly includes: • Line Layout — Group components into assemblies stations
- • Machine Programming — Configure pick-and-place order, rotations & positions
- • Stencil Designs — Determine solder paste layer patterns
- • Manual Kitting — Organize parts for operators
- • Testing — Specify test points & limits
- So for high volume SMT lines, the Production BOM provides critical manufacturing build
- instructions down to all details needed for each specific board variant.
-# BOM Role in Serviceability
- During the product life, components may fail needing repair or upgrade. Here the bill of materials
- continues providing value in the form of a Service BOM.Field maintenance, troubleshooting and
- warranty repair activities rely on service BOM data such as: • Lifecycle Status — Is part still active for
- replacement
- • Alternate Parts — Substitute items if needed
- • Repair Guides — Component removal, orientation info
- • Diagnostics — Expected voltages, signal values
-## Circuit Diagram
+## EQUIPMENT REQUIRED:
+●	Hardware: Personal Computer (PC)<br>
+●	Software: Eagle <br>
+## PROCEDURE:
+	Create a New Project:<br>
+o	Launch EAGLE and start a new project for your PCB design.<br>
+o	Within the project, create a new schematic file.<br>
+	Add Components:<br>
+o	Utilize the built-in libraries in EAGLE or create custom libraries if needed.<br>
+o	Use the 'Add' tool to place the required components onto the schematic sheet.<br>
+	Make Connections:<br>
+o	Connect the components using the 'Net' tool.<br>
+o	Label the nets clearly to maintain clarity and organization in your design.<br>
+	Check for Errors:<br>
+o	Once the schematic design is complete, perform an Electrical Rule Check (ERC) to identify and correct any errors.<br>
+o	Save the schematic after confirming that no errors are present.<br>
+	Switch to Board Layout:<br>
+o	Click on the 'Generate/Switch to Board' button to create the PCB layout from the schematic.<br>
+	Arrange Components and Route Traces:<br>
+o	In the board layout editor, arrange the components to optimize space and reduce signal interference.<br>
+o	Use the 'Route' tool to connect the components based on the schematic design.<br>
+o	Ensure proper routing by utilizing the available editing tools in EAGLE to avoid design rule violations.<br>
+	Design Rule Check (DRC):<br>
+o	Perform a Design Rule Check (DRC) to ensure that the routing and layout comply with design standards and that there are no issues.<br>
+o	Save the board layout after resolving any errors.<br>
+	Generate Gerber Files:<br>
+o	Go to File > CAM Processor and configure the CAM jobs to generate Gerber files for all PCB layers, such as copper layers, silkscreen, solder mask, and drill files.<br>
+o	Verify the generated files to ensure they contain all necessary information for manufacturing.<br>
+	Save Manufacturing Files:<br>
+o	Save the Gerber files and any other required manufacturing files to send to your PCB manufacturer for fabrication.<br>
 
-![image](https://github.com/user-attachments/assets/c1cd5664-42a4-4128-b94b-da4d73e4b71c)
+## THEORY:
+The Infrared Remote Control Switch is a simple electronic circuit that uses an infrared (IR) receiver to detect signals from a standard TV remote and control an electrical load, such as a lamp or appliance, through a relay. At the heart of the circuit lies the CD4027 IC, which is a dual JK flip-flop. JK flip-flops are bistable multivibrators capable of storing one bit of data and toggling their state with every pulse input. In this circuit, the TSOP1738 IR receiver module is used to detect IR pulses sent by a remote control. The TSOP1738 is designed to receive 38kHz modulated infrared signals and output a demodulated digital signal that can be read by a microcontroller or logic circuit. The 2N4403 PNP transistor is used to amplify and condition the signal from the TSOP1738, ensuring a reliable trigger for the flip-flop. This type of system demonstrates the fundamental concept of remote-controlled electronics using modulated IR signals, logic circuitry, and electromechanical switching components like relays.
+### Working:
+When a button on the IR remote is pressed, it sends a modulated 38kHz IR signal which is received by the TSOP1738. The TSOP demodulates the signal and produces a low pulse which is fed into the base of the first 2N4403 transistor, acting as an amplifier. This transistor then provides a strong triggering signal to the CD4027 flip-flop IC, which is wired to toggle its output state with each pulse received. The output from the flip-flop then controls the base of a second 2N4403 transistor, which functions as a switch to drive a 5V relay. When the flip-flop output goes high, the transistor conducts and energizes the relay coil, turning ON the connected load. On receiving the next IR pulse, the output toggles low, deactivating the relay and turning OFF the load. An LED indicator connected in parallel with the relay provides a visual cue of the ON/OFF status. The 1N4007 diode across the relay protects the circuit from voltage spikes due to back EMF when the relay is switched OFF. This toggling operation continues every time a button on the IR remote is pressed, making it suitable for simple wireless control applications.
+## CIRCUIT DIAGRAM:
+![image](https://github.com/user-attachments/assets/3e488286-ea7d-4a9b-a057-02a31fdf4430)
 
-## Output
+## EXPECTED OUTPUT:
+### Schematic diagram
 
-![image](https://github.com/user-attachments/assets/da981cc1-6822-4522-99d8-2b99a0a606b2)
+![image](https://github.com/user-attachments/assets/7c378563-8e83-42cd-b35d-47f3fc13db9d)
 
+### Layout diagram
 
-## Result
- Thus the bill of materials is prepared for the given 5V Power supply module circuit.
+ ![image](https://github.com/user-attachments/assets/abfe54a3-5a78-46ea-a3ef-c73e190f7336)
+
+ 
+## RESULT:
+Thus, the schematic and PCB layout for the Infrared remote control circuit has been successfully designed using Eagle software.
