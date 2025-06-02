@@ -1,4 +1,4 @@
-## Design-an-Infrared-remote-control-circuit-using-Eagle-software-and-generate-the-Gerber-file
+# Design-an-Infrared-remote-control-circuit-using-Eagle-software-and-generate-the-Gerber-file
 
 ## Bill-of-Materials-for-PCB-Design
 ## Aim
